@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+#define MAX_MOVIES 100
+
+struct Movie
+{
+    char title[100];
+    char gen[50];
+    char language[50];
+};
+
+int main()
+{
+    int n;
+    struct Movie m[MAX_MOVIES];
+
+    printf("Enter the number of movies: ");
+    scanf("%d", &n);
+
+    getchar();
+
+    for (int i = 0; i < n; i++)
+    {
+        printf("\nEnter details for movie %d:\n", i + 1);
+        printf("Title: ");
+        scanf("%[^\n]", m[i].title);
+        getchar();
+
+        printf("Gen: ");
+        scanf("%[^\n]", m[i].gen);
+        getchar();
+
+        printf("Language: ");
+        scanf("%[^\n]", m[i].language);
+        getchar();
+    }
