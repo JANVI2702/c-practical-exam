@@ -1,0 +1,31 @@
+#include <stdio.h>
+void swap(int *a, int *b)
+{
+    int nun;
+    nun = *a;
+    *a = *b;
+    *b = nun;
+}
+int main()
+{
+    int number1, number2;
+    int *ptr1, *ptr2;
+
+    printf("enter first number:");
+    scanf("%d", &number1);
+    printf("enter second number:");
+    scanf("%d", &number2);
+
+    printf("before swapping:\n");
+    printf("x:%d\n", number1);
+    printf("y:%d\n", number2);
+
+    ptr1 = &number1;
+    ptr2 = &number2;
+
+    swap(ptr1, ptr2);
+
+    printf("after swapping:\n");
+    printf("x:%d\n", number1);
+    printf("y:%d\n", number2);
+}
